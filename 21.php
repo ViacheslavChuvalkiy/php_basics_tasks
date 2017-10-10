@@ -1,7 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: slv19
- * Date: 08.10.2017
- * Time: 15:07
- */
+
+$a = 0;
+
+settype($a, 'bool');
+
+echo '<pre>';
+var_dump($a);
+echo '</pre>';
+
+echo 'Значение false так как изначальное значение 0';

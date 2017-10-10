@@ -1,6 +1,6 @@
 <?php
 $name= 'Вячеслав';
-$age = 32;
+$age = 'test';
 
 if ( $age >= 18 && $age <= 59) {
     $message = "Вам еще работать и работать";
@@ -12,12 +12,12 @@ elseif ($age >=60) {
     echo $message;
 }
 
-elseif ($age >= 0 && $age <=17) {
+elseif ( is_integer($age) && $age >= 0 && $age <=17) {
     $message = "Вам еще рано работать";
     echo $message;
-}
+    }
 
-elseif ((int) $age !== $age ) {
+elseif (!is_integer($age)){
     $message = "Неизвестный возраст";
     echo $message;
 }

@@ -1,7 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: slv19
- * Date: 08.10.2017
- * Time: 15:06
- */
+$a = rand (0 , 2000);
+$b = rand(0 , 1500);
+
+echo max($a, $b);

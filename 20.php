@@ -1,7 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: slv19
- * Date: 08.10.2017
- * Time: 15:06
- */
+
+$a = 20;
+
+settype($a, 'bool');
+
+echo '<pre>';
+var_dump($a);
+echo '</pre>';
+
+echo 'Значение true так как число не 0';
