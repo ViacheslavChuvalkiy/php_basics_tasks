@@ -1,0 +1,153 @@
+#1 вычислить x^n - без спец. функций
+
+<?php
+
+$x = rand(1,20);
+$n = rand(1,10);
+$i = 0;
+$a = $x;
+
+do {
+    $b = ($a * $x);
+    $a = $b;
+    $i++;
+   }
+while ($i!=$n);
+    echo ($x) . ' в степени ' . ($n) . ' равно : ' . ($b) ;
+    echo '<hr>';
+?>
+
+  #2 вычислить p! ( Я не понял задание)
+
+<?php
+echo pi();
+echo '<hr>';
+?>
+
+
+#3  найти среди чисел 1, 1+1/2, 1+1/2+1/3, ... первое число, которое больше чем X
+
+<?php
+/*
+$x=rand(2,3);
+
+
+$a = 1;
+$n=0;
+$b=1;
+$c = $b/$n;
+
+
+
+do {
+    $n++;
+
+    $sum = $a + $c;
+    $sum += $c;
+
+    echo '<hr>';
+    echo ' $a = ' . ($a);
+    echo '<br>';
+    echo ' $c = ' . ($b/$n);
+    echo '<br>';
+    echo ' $x = ' . ($x);
+    echo '<br>';
+    echo  ($sum) . ' + ' . ($b/$n) . ' >= ' . ($x);
+}
+
+
+while($sum >=$x) ;
+
+
+
+*/
+?>
+
+
+#4 дано целое N. Найти такие q, для которых N делится на q^2 и не делится на q^3
+<?php
+$n = rand(10,100);
+echo '<br>';
+
+$q= 0;
+
+while ($q <= $n){
+    $q++;
+    $q2= $q*$q;
+    $q3= $q*$q*$q;
+    $res= $n /$q2;
+    $res2= $n /$q3;
+    /*  echo 'q= '. ($q);
+      echo '<br>';
+
+      echo 'q2 = ' . ($q2);
+      echo '<br>';
+      echo 'q3 = '. ($q3);
+      echo '<br>';
+
+      echo 'res $n /$q2 = '. ($res);
+      echo '<br>';
+      echo 'res2  $n /$q3 = '. ($res2);
+      echo '<br>';
+      */
+
+    if( $n % $q2  == 0 &&  $n % $q3 != 0) {
+        echo 'N = ' . ($n);
+        echo '<br>';
+        echo 'число q на которое N делиться на q в квадрате и не делиться в 3 степени = ' .  ($q);
+    }
+
+};
+echo '<hr>';
+
+?>
+
+#5 проверить, правильно ли в строке расставлены круглые скобки
+<?php
+
+echo '<hr>';
+?>
+
+
+#6 дана строка со словами. Получить массив слов (explode)
+<?php
+echo '<br>';
+
+$str= 'Hello'. 'World' . "Friend" . 'Kiev' . 'Ukraine';
+$arr_str= explode('.',$str);
+
+echo '<pre>';
+print_r($arr_str);
+echo '</pre>';
+
+echo '<hr>';
+?>
+
+#7 дан массив с номерами телефонов. Получить строку с перечислением телефонов через запятую (implode)
+<?php
+echo '<br>';
+
+$arr= ['0442505588', '0442558899', '0634445558', '0995655544', '0505588999', '0665556655'];
+
+$s = implode(', ', $arr);
+echo $s;
+
+echo '<hr>';
+?>
+
+#8 дана строка. Убрать из нее все повторения символов. Например Hello world -> Helo wrd
+<?php
+echo '<br>';
+
+$str = 'Hello my friend! How are you?';
+$arr_str= str_split($str);;
+$arr_u = array_unique($arr_str);
+echo ($str);
+echo '<br>';
+
+echo '<pre>';
+print_r($arr_u);
+echo '</pre>';
+
+echo '<hr>';
+?>
