@@ -17,10 +17,17 @@ while ($i!=$n);
     echo '<hr>';
 ?>
 
-  #2 вычислить p! ( Я не понял задание)
+  #2 вычислить p!
 
 <?php
-echo pi();
+
+$p = rand(1,50);
+for ($i = 0; $i <= $p; $i++) {
+    $n = $i * $p;
+}
+
+echo 'Факториал числа ' . ($p) . ' = ' . ($n);
+
 echo '<hr>';
 ?>
 
@@ -104,7 +111,18 @@ echo '<hr>';
 
 #5 проверить, правильно ли в строке расставлены круглые скобки
 <?php
+echo '<br>';
 
+$string= 'Hello, i am teenager (i am 18 years)';
+
+foreach (count_chars($string,1) as $i => $val) {
+    //echo "\"", chr($i), "\" встречается в строке $val раз(а).\n";
+
+    if ($val >= 1) {
+        echo ' символ = ' . ' " ' . (chr($i)) . ' " '  . '  встречется '  . ($val) . ' раз';
+        echo '<br>';
+    }
+}
 echo '<hr>';
 ?>
 
